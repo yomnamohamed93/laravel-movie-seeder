@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TopRatedMovie extends Model
 {
-    // protected $primaryKey = 'record_id';
+    protected $orderBy = 'vote_average';
     protected $casts = [
         'adult' => 'boolean',
         'popularity' => 'float',
