@@ -20,6 +20,7 @@ Start the local development server
    <pre> php artisan serve </pre>
    
 ## To run the scheduler that fetch the movies from the external API
+</br> The scheduler is set to run every 5 minutes. </br>
 <pre> php artisan schedule run </pre>
 
 # Testing API
