@@ -17,9 +17,11 @@ Run the database migrations and seeding (**Please note to set database connectio
 
    <pre> php artisan migrate </pre>
    
-## Seed the genres (movies categories) from the external API
+Seed the genres (movies categories) from the external API
    <pre> php artisan db:seed </pre>
-   
+  
+Start the local development server
+
    <pre> php artisan serve </pre>
    
 ## To run the schedueler that fetch the movies from the external API
