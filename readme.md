@@ -5,9 +5,10 @@
 ## Installation and configuration steps
 
     git clone git@github.com:yomnamohamed93/laravel-movie-seeder.git
-   <pre class="code highlight js-syntax-highlight shell white" lang="shell" v-pre="true"><code><span id="LC1" class="line" lang="shell"><span class="nb">cd </span>bus-booking</span></code></pre>
+   <pre class="code highlight js-syntax-highlight shell white" lang="shell" v-pre="true">
+    <code><span id="LC1" class="line" lang="shell">d laravel-movie-seeder</span></code></pre>
     
-    cd laravel-movie-seeder
+    cd laravel-movie-seeder </pre>
 
     composer install
 
