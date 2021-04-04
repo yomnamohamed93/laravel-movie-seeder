@@ -12,7 +12,7 @@
 <pre>  cp .env.example .env </pre>
 <pre> php artisan key:generate </pre>
    
-
+In .env file change the value of **QUEUE_CONNECTION** to be **database
 Run the database migrations and seeding (**Please note to set database connection in .env file**)
 
    <pre> php artisan migrate </pre>
