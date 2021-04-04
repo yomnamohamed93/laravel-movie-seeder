@@ -2,7 +2,7 @@
 
 namespace App\Console;
 
-use App\Console\Commands\SeedTopRatedMovies;
+use App\Jobs\SeedTopRatedMovies as JobsSeedTopRatedMovies;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +14,6 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\SeedTopRatedMovies',
     ];
 
     /**
@@ -25,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('topRatedMovies:seed')
-                 ->everyMinute();
+        $schedule->job(new JobsSeedTopRatedMovies)
+                 ->everyFiveMinutes();
     }
 
     /**

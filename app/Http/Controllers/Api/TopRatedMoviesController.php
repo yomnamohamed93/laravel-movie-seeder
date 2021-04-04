@@ -10,22 +10,26 @@ use Illuminate\Support\Facades\DB;
 
 class TopRatedMoviesController extends Controller
 {
+    private $perPage;
+    public function __construct(Request $request)
+    {
+        $this->perPage=request('perPage', 20);
+
+    }
     public function all(Request $request){
         $query=TopRatedMovie::query();
-        DB::enableQueryLog();
         if($request->has("genre_id") && $request->genre_id){
             $query->whereHas('genres', function($q) use ($request){
                 $q->where('genres.id', $request->genre_id);
             });
         }
-        // $query->orderBy('vote_average','desc')->paginate(20);
-        // dd(($request->popular));
         if($request->popular){
             $query->orderBy('popularity',$request->popular);
         }
         if($request->rating){
             $query->orderBy('vote_average',$request->rating);
         }
-        return TopRatedMovieResource::collection($query->paginate(20));
+        $query=($request->perPage==-1)?$query->get():$query->paginate($this->perPage);
+        return TopRatedMovieResource::collection($query);
     }
 }
