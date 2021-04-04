@@ -1,10 +1,8 @@
 # Laravel Movies Seeder Task
 
-----------
 
-## Installation and configuration steps
+### Installation and configuration steps
 
-   
  <pre> git clone git@github.com:yomnamohamed93/laravel-movie-seeder.git </pre>   
  <pre>  cd laravel-movie-seeder </pre>
  <pre>  composer install </pre>
@@ -30,7 +28,7 @@ Top Rated Movies api can now be accessed through **GET** request at
 
     http://localhost:8000/api/topRatedMovies
     
-- No paramters are required for this api.
+- No paramters are required for this api.</br>
 **All the following parameters is sent as query string parameters**.
 - use **page** parameter to paginate.
 - Default page size is set to **20** , you can change it by sending your desired value as a parameter called **perPage** . 
