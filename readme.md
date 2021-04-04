@@ -26,11 +26,12 @@ Start the local development server
 
 # Testing API
 
-Top Rated Movies api can now be accessed at
+Top Rated Movies api can now be accessed through **GET** request at 
 
     http://localhost:8000/api/topRatedMovies
     
 - No paramters are required for this api.
+**All the following parameters is sent as query string parameters**.
 - use **page** parameter to paginate.
 - Default page size is set to **20** , you can change it by sending your desired value as a parameter called **perPage** . 
 - You can filter by category using parameter called **genre_id** .
