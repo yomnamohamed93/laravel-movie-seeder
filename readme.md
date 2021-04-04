@@ -5,28 +5,24 @@
 ## Installation and configuration steps
 
    
-<pre> git clone git@github.com:yomnamohamed93/laravel-movie-seeder.git </pre>
-    
-<pre>  cd laravel-movie-seeder </pre>
-<pre>  composer install </pre>
-<pre>  cp .env.example .env </pre>
-<pre> php artisan key:generate </pre>
-   
-In .env file change the value of **QUEUE_CONNECTION** to be **database
-Run the database migrations and seeding (**Please note to set database connection in .env file**)
+ <pre> git clone git@github.com:yomnamohamed93/laravel-movie-seeder.git </pre>   
+ <pre>  cd laravel-movie-seeder </pre>
+ <pre>  composer install </pre>
+ <pre>  cp .env.example .env </pre>
+ <pre> php artisan key:generate </pre>
+ In .env file change the value of **QUEUE_CONNECTION** to be **database**. </br>
 
-   <pre> php artisan migrate </pre>
-   
+Run the database migrations and seeding (**Please note to set database connection in .env file**)
+ <pre> php artisan migrate </pre>  
 Seed the genres (movies categories) from the external API
-   <pre> php artisan db:seed </pre>
-  
+  <pre> php artisan db:seed </pre>
+
 Start the local development server
 
    <pre> php artisan serve </pre>
    
 ## To run the schedueler that fetch the movies from the external API
 <pre> php artisan schedule run </pre>
-
 
 # Testing API
 
