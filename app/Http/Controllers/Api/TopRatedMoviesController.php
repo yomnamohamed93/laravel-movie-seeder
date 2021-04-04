@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TopRatedMovieResource;
 use App\Models\TopRatedMovie;
-use Illuminate\Support\Facades\DB;
 
 class TopRatedMoviesController extends Controller
 {
