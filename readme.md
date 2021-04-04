@@ -1,11 +1,12 @@
-# ![Laravel Movies Seeder Task]
+# Laravel Movies Seeder Task
 
 ----------
 
 ## Installation and configuration steps
 
     git clone git@github.com:yomnamohamed93/laravel-movie-seeder.git
-
+    ----------------------------------------------------------------------
+    
     cd laravel-movie-seeder
 
     composer install
