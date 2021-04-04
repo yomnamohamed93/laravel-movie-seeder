@@ -15,19 +15,26 @@
 
 Run the database migrations and seeding (**Please note to set database connection in .env file**)
 
-   <pre><pre> php artisan migrate </pre>
+   <pre> php artisan migrate </pre>
+   
+## Seed the genres (movies categories) from the external API
    <pre> php artisan db:seed </pre>
+   
+   <pre> php artisan serve </pre>
+   
+## To run the schedueler that fetch the movies from the external API
+<pre> php artisan schedule run </pre>
 
-Start the local development server
-
-  <pre> php artisan serve </pre>
-
-You can now access the server at http://localhost:8000
-
-The api can be accessed at [http://localhost:8000/api](http://localhost:8000/api).
 
 # Testing API
 
-The api can now be accessed at
+Top Rated Movies api can now be accessed at
 
-    http://localhost:8000/api
+    http://localhost:8000/api/topRatedMovies
+    
+- No paramters are required for this api.
+- use **page** parameter to paginate.
+- Default page size is set to **20** , you can change it by sending your desired value as a parameter called **perPage** . 
+- You can filter by category using parameter called **genre_id** .
+- You can sort the movies by rating using parameter called **rating** the value should **asc** or **desc**.
+- You can sort the movies by popularity using parameter called **popular** the value should **asc** or **desc**.
